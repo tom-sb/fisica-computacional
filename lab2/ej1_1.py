@@ -41,6 +41,10 @@ for t in pt:
 	pv3.append(vx3)
 	pa3.append(ax3)
 
+print("(a) posicion final: ",px[len(px)-1])
+print("(b) posicion final: ",px2[len(px2)-1])
+print("(c) posicion final: ",px3[len(px3)-1])
+
 plt.subplot(2,2,1)
 plt.plot(pt,px)
 plt.plot(pt,px2)

@@ -6,7 +6,7 @@ fig = plt.figure()
 axl = fig.gca(projection='3d')
 
 h=0.01
-accelAxis=[[2,-10,0],[-1,-10,0],[2,-10,-1],[0,-10,0]]
+accelAxis=[[2,-10,0],[-1,-10,0],[2,-10,-1]]
 
 for it in accelAxis:
 	initAxis=[0,0,0]
@@ -16,8 +16,6 @@ for it in accelAxis:
 	while(True):
 		for i in range(len(initAxis)):
 			initAxis[i]=initAxis[i]+speedAxis[i]*h
-			if(it == accelAxis[3] and i==0):
-				it[i] = pow(anyTime,2)/5
 			speedAxis[i]=speedAxis[i]+it[i]*h
 
 			axisArr[i].append(initAxis[i])

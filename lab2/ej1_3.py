@@ -21,6 +21,11 @@ for i in range(it):
 		pv[i].append(vx[i])
 
 	axl.plot(pv[i],px[i],pt,label=tag[i])
+
+print("posicion final: ",px[0][len(px[0])-1])
+print("posicion final: ",px[1][len(px[1])-1])
+print("posicion final: ",px[2][len(px[2])-1])
+
 plt.xlabel('velocidad')
 plt.ylabel('espacio')
 axl.set_zlabel('tiempo', fontsize=10, rotation = 0)
