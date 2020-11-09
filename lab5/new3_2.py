@@ -15,8 +15,8 @@ pyPunto=[[]for i in range(nlines)]
 axs = plt.subplot()
 axs.set_aspect('equal')
 
-#d=6
-pt = np.arange(0,1000000,h)
+#d=0.5
+pt = np.arange(0,150000,h)
 for it in range(nlines):
 	#if it>0:
 	#	vPunto[it][0] = vPunto[it-1][0] + 0.7
@@ -41,10 +41,10 @@ for it in range(nlines):
 		if(punto[it][1] > 20):
 			break
 
-		if(pow(punto[it][0],2) + pow(punto[it][1],2) <= pow(r,2)):
+		if(pow(punto[it][0]-d,2) + pow(punto[it][1],2) <= pow(r,2)):
 			break
-		#if(pow(punto[it][0]-(2*d),2) + pow(punto[it][1],2) <= pow(r,2)):
-		#	break
+		if(pow(punto[it][0]-d,2) + pow(punto[it][1],2) <= pow(r,2)):
+			break
 		
 
 cuerpo1 = plt.Circle((0, 0), r, color="lightblue", fill=True)
